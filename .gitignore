@@ -1,0 +1,8 @@
+.nupkg/
+.vs/
+obj/
+bin/
+packages/
+
+*.suo
+*.cache

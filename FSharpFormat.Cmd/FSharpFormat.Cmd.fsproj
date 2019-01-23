@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <AssemblyName>fsfmt</AssemblyName>
+
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>fsfmt</ToolCommandName>
+        <PackageOutputPath>../.nupkg</PackageOutputPath>            
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Update="FSharp.Core" Version="4.5.4" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FSharpFormat\FSharpFormat.fsproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="FileFinder.fs" />
+        <Compile Include="Options.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+</Project>

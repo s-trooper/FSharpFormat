@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="FSharp.Compiler.Service" Version="25.0.1" />
+        <PackageReference Update="FSharp.Core" Version="4.5.4" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Token.fs" />
+        <Compile Include="FormatterHelper.fs" />
+        <Compile Include="IndentRules.fs" />
+        <Compile Include="IndentFormatter.fs" />
+        <Compile Include="SpaceFormatter.fs" />
+        <Compile Include="Formatters.fs" />
+        <Compile Include="SourceTokenizer.fs" />
+        <Compile Include="SourceFormatter.fs" />
+    </ItemGroup>
+</Project>

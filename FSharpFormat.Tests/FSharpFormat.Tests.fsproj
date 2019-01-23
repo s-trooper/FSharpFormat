@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net461</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DefineConstants>TRACE</DefineConstants>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="FSharp.Compiler.Service" Version="25.0.1" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.12.0" />
+        <PackageReference Include="NUnitLite" Version="3.11.0" />
+        <PackageReference Update="FSharp.Core" Version="4.5.4" />
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FSharpFormat\FSharpFormat.fsproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="TokenizerTests.fs" />
+        <Compile Include="SpacingTests.fs" />
+        <Compile Include="IndentTests.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+</Project>
